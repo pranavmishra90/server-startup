@@ -34,12 +34,13 @@ alias unrar-find='unrar e -r -o- *.rar ./'
 # Git
 #------------------
 ## Add github ssh
-# eval $(ssh-agent -s)
-ssh-add ~/.ssh/gitea
+eval $(ssh-agent -s)
+
+alias ssh-github='ssh-add ~/.ssh/github/github'
+alias ssh-gitea='ssh-add ~/.ssh/gitea/gitea'
 
 git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 alias which-branch="git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'"
-
