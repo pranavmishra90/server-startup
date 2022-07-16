@@ -33,6 +33,7 @@ alias unrar-find='unrar e -r -o- *.rar ./'
 
 # Git
 #------------------
+git config --global core.editor "nano"
 ## Add github ssh
 eval $(ssh-agent -s)
 
